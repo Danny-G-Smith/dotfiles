@@ -42,7 +42,7 @@ finish() {
 
 # Set directory
 export DOTFILES=${1:-"$HOME/.dotfiles"}
-GITHUB_REPO_URL_BASE="https://github.com/denysdovhan/dotfiles"
+GITHUB_REPO_URL_BASE="https://github.com/Danny-G-Smith/dotfiles-4"
 HOMEBREW_INSTALLER_URL="https://raw.githubusercontent.com/Homebrew/install/master/install"
 
 on_start() {
@@ -78,7 +78,8 @@ install_cli_tools() {
     read -p "Do you agree to install Command Line Tools? [y/N] " -n 1 answer
     echo
     if [ ${answer} != "y" ]; then
-      exit 1
+      #exit 1
+      return
     fi
 
     info "Installing Command Line Tools..."
@@ -105,7 +106,8 @@ install_homebrew() {
     read -p "Do you agree to proceed with Homebrew installation? [y/N] " -n 1 answer
     echo
     if [ ${answer} != "y" ]; then
-      exit 1
+      #exit 1
+      return
     fi
 
     info "Installing Homebrew..."
@@ -127,7 +129,8 @@ install_git() {
     read -p "Do you agree to proceed with Git installation? [y/N] " -n 1 answer
     echo
     if [ ${answer} != "y" ]; then
-      exit 1
+      #exit 1
+      return
     fi
 
     info "Installing Git..."
@@ -155,7 +158,8 @@ install_zsh() {
     read -p "Do you agree to proceed with Zsh installation? [y/N] " -n 1 answer
     echo
     if [ ${answer} != "y" ]; then
-      exit 1
+      #exit 1
+      return
     fi
 
     info "Installing Git..."
@@ -196,7 +200,8 @@ install_dotfiles() {
     read -p "Do you agree to proceed with dotfiles installation? [y/N] " -n 1 answer
     echo
     if [ ${answer} != "y" ]; then
-      exit 1
+      #exit 1
+      return
     fi
 
     git clone --recursive "$GITHUB_REPO_URL_BASE.git" $DOTFILES

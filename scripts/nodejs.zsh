@@ -82,9 +82,9 @@ configure_npm_init() {
   info "Configure npm init..."
 
   # Defaults
-  local name="Denys Dovhan"
-  local email="denysdovhan@gmail.com"
-  local website="http://denysdovhan.com/"
+  local name="Danny G Smith"
+  local email="dannygsmith@gmail.com"
+  local website="https://campfirepixels.com/"
 
   ask "What is your name? ($name): " && read NAME
   ask "What is your email? ($email): " && read EMAIL
